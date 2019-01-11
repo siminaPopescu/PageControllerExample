@@ -10,6 +10,8 @@ import Cocoa
 
 private struct Constants {
     static let storyboard = "Main"
+    static let last = 1
+    static let first = 0
 }
 
 class PageController: NSPageController {
@@ -21,11 +23,11 @@ class PageController: NSPageController {
         delegate = self
         arrangedObjects = myViewControllers
     }
-    
 }
 
 // MARK: - Page Controller delegate
 extension PageController: NSPageControllerDelegate {
+    
     func pageController(_ pageController: NSPageController, viewControllerForIdentifier identifier: NSPageController.ObjectIdentifier) -> NSViewController {
         return NSStoryboard(name: Constants.storyboard, bundle: nil).instantiateController(withIdentifier: identifier) as? NSViewController ?? NSViewController()
     }
@@ -36,5 +38,25 @@ extension PageController: NSPageControllerDelegate {
     
     func pageControllerDidEndLiveTransition(_ pageController: NSPageController) {
         completeTransition()
+    }
+}
+
+// MARK: - Navigation methods
+extension PageController {
+    
+    private func changePageController(at index: Int) {
+        selectedIndex = index
+    }
+    
+    override func navigateForward(_ sender: Any?) {
+        if selectedIndex < myViewControllers.count - Constants.last {
+            changePageController(at: selectedIndex + Constants.last)
+        }
+    }
+    
+    override func navigateBack(_ sender: Any?) {
+        if selectedIndex > 0 {
+            changePageController(at: selectedIndex - Constants.last)
+        }
     }
 }

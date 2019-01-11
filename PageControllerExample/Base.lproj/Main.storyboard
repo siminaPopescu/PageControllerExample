@@ -704,10 +704,60 @@
         <!--Page Controller-->
         <scene sceneID="Q5g-11-qQU">
             <objects>
-                <pagecontroller id="loD-sS-slv" sceneMemberID="viewController">
+                <pagecontroller id="loD-sS-slv" customClass="PageController" customModule="PageControllerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XjP-1b-rO1">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-EC-Cbc">
+                                <rect key="frame" x="268" y="248" width="119" height="32"/>
+                                <buttonCell key="cell" type="push" title="Go to page 4" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3qA-WH-REA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vsD-RF-Bdz">
+                                <rect key="frame" x="141" y="248" width="119" height="32"/>
+                                <buttonCell key="cell" type="push" title="Go to page 3" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6QV-hi-SAC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-lA-rVW">
+                                <rect key="frame" x="14" y="248" width="119" height="32"/>
+                                <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f4L-rc-jR9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="navigateBack:" target="loD-sS-slv" id="EV1-oA-uoe"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-6e-mEN">
+                                <rect key="frame" x="395" y="248" width="119" height="32"/>
+                                <buttonCell key="cell" type="push" title="Forward" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qww-ir-8GL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="navigateForward:" target="loD-sS-slv" id="8uY-fG-Khe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SNM-EC-Cbc" firstAttribute="top" secondItem="vsD-RF-Bdz" secondAttribute="top" id="1nC-YC-zTg"/>
+                            <constraint firstItem="SNM-EC-Cbc" firstAttribute="width" secondItem="g2O-6e-mEN" secondAttribute="width" id="3Nh-Cp-nt8"/>
+                            <constraint firstItem="UoG-lA-rVW" firstAttribute="width" secondItem="vsD-RF-Bdz" secondAttribute="width" id="IxO-8D-Nhe"/>
+                            <constraint firstItem="vsD-RF-Bdz" firstAttribute="top" secondItem="UoG-lA-rVW" secondAttribute="top" id="Pcp-X9-VBF"/>
+                            <constraint firstItem="g2O-6e-mEN" firstAttribute="top" secondItem="SNM-EC-Cbc" secondAttribute="top" id="Rx9-NG-QYW"/>
+                            <constraint firstItem="vsD-RF-Bdz" firstAttribute="leading" secondItem="UoG-lA-rVW" secondAttribute="trailing" constant="20" id="dcE-Rs-tBD"/>
+                            <constraint firstItem="UoG-lA-rVW" firstAttribute="leading" secondItem="XjP-1b-rO1" secondAttribute="leading" constant="20" id="f1n-Av-cY4"/>
+                            <constraint firstItem="UoG-lA-rVW" firstAttribute="top" secondItem="XjP-1b-rO1" secondAttribute="top" constant="24" id="jrz-Ew-occ"/>
+                            <constraint firstItem="SNM-EC-Cbc" firstAttribute="leading" secondItem="vsD-RF-Bdz" secondAttribute="trailing" constant="20" id="kMI-R1-cwE"/>
+                            <constraint firstAttribute="trailing" secondItem="g2O-6e-mEN" secondAttribute="trailing" constant="20" id="q6A-c5-DQR"/>
+                            <constraint firstItem="vsD-RF-Bdz" firstAttribute="width" secondItem="SNM-EC-Cbc" secondAttribute="width" id="rNn-ZP-KSi"/>
+                            <constraint firstItem="g2O-6e-mEN" firstAttribute="leading" secondItem="SNM-EC-Cbc" secondAttribute="trailing" constant="20" id="yjV-4H-n60"/>
+                        </constraints>
                     </view>
                 </pagecontroller>
                 <customObject id="i0L-sN-JSG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -721,6 +771,17 @@
                     <view key="view" id="4Px-DR-zrS">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTN-f4-sxU">
+                                <rect key="frame" x="202" y="141" width="47" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 4" id="YQ8-gz-bcC">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="7wj-Hy-Xcb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -730,15 +791,15 @@
         <!--View Controller-->
         <scene sceneID="JTy-V9-sTa">
             <objects>
+                <customObject id="7A2-Xd-zxz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="IHo-Cm-7Oc" sceneMemberID="viewController">
                     <view key="view" id="RMl-bt-mtz">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="7A2-Xd-zxz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309" y="1130"/>
+            <point key="canvasLocation" x="-309" y="1903"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eoF-w2-iGm">
@@ -747,6 +808,17 @@
                     <view key="view" id="0lv-5y-XK2">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-Ou-mjM">
+                                <rect key="frame" x="203" y="141" width="44" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 1" id="ONu-9b-ZND">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="CLt-5i-X1E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -760,6 +832,17 @@
                     <view key="view" id="Aj6-Ud-vym">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-oF-21P">
+                                <rect key="frame" x="202" y="141" width="46" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 3" id="tKt-8w-big">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="hQg-iG-kAp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -773,6 +856,17 @@
                     <view key="view" id="yLz-Fh-E8G">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-OY-Srt">
+                                <rect key="frame" x="202" y="141" width="46" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 2" id="Ggy-wJ-CeN">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="0l2-SG-y5b" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -786,6 +880,17 @@
                     <view key="view" id="fUo-02-y1y">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-Lt-4ni">
+                                <rect key="frame" x="202" y="141" width="46" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 5" id="0ow-uf-nTw">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="E3r-8W-9tW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -799,6 +904,17 @@
                     <view key="view" id="olH-7D-Zil">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPA-wO-hux">
+                                <rect key="frame" x="202" y="141" width="47" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Page 6" id="j8e-bK-MWz">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="aMe-SR-RZY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

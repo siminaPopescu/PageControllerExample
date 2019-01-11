@@ -56,14 +56,30 @@
 			isa = PBXGroup;
 			children = (
 				C3E02C3921E88C91005AD86D /* AppDelegate.swift */,
-				C3E02C3B21E88C91005AD86D /* ViewController.swift */,
-				C3E02C3D21E88C92005AD86D /* Assets.xcassets */,
-				C3E02C3F21E88C92005AD86D /* Main.storyboard */,
 				C3E02C4221E88C92005AD86D /* Info.plist */,
-				C3E02C4321E88C92005AD86D /* PageControllerExample.entitlements */,
+				C3E02C3B21E88C91005AD86D /* ViewController.swift */,
+				C3E02C3F21E88C92005AD86D /* Main.storyboard */,
 				C3E02C4921E897BB005AD86D /* PageController.swift */,
+				C3E02C4C21E89AF4005AD86D /* UI Helpers */,
+				C3E02C4D21E89B00005AD86D /* Supporting files */,
 			);
 			path = PageControllerExample;
+			sourceTree = "<group>";
+		};
+		C3E02C4C21E89AF4005AD86D /* UI Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Helpers";
+			sourceTree = "<group>";
+		};
+		C3E02C4D21E89B00005AD86D /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C3E02C3D21E88C92005AD86D /* Assets.xcassets */,
+				C3E02C4321E88C92005AD86D /* PageControllerExample.entitlements */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
