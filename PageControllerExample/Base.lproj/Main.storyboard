@@ -783,7 +783,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="240"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-Ou-mjM">
-                                        <rect key="frame" x="202" y="112" width="46" height="17"/>
+                                        <rect key="frame" x="212" y="112" width="46" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Page 2" id="ONu-9b-ZND">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -792,7 +792,7 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="JQD-Ou-mjM" firstAttribute="centerX" secondItem="OOZ-ZB-Z6Z" secondAttribute="centerX" id="H4A-F8-IKw"/>
+                                    <constraint firstItem="JQD-Ou-mjM" firstAttribute="centerX" secondItem="OOZ-ZB-Z6Z" secondAttribute="centerX" constant="10" id="H4A-F8-IKw"/>
                                     <constraint firstItem="JQD-Ou-mjM" firstAttribute="centerY" secondItem="OOZ-ZB-Z6Z" secondAttribute="centerY" id="nmw-BA-6AI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

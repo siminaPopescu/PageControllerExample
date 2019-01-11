@@ -24,7 +24,7 @@ class PageController: NSPageController {
         arrangedObjects = myViewControllers
     }
     
-    @IBAction func goToPage3(_ sender: Any) {
+    @IBAction func goToPage3(_ sender : Any) {
         // because the array starts from 0
         changePageController(at: 2)
     }
@@ -38,15 +38,11 @@ class PageController: NSPageController {
 extension PageController: NSPageControllerDelegate {
     
     func pageController(_ pageController: NSPageController, viewControllerForIdentifier identifier: NSPageController.ObjectIdentifier) -> NSViewController {
-        return NSStoryboard(name: Constants.storyboard, bundle: nil).instantiateController(withIdentifier: identifier) as? NSViewController ?? NSViewController()
+        return instantiate(from: .Main, with: identifier) ?? NSViewController()
     }
     
     func pageController(_ pageController: NSPageController, identifierFor object: Any) -> NSPageController.ObjectIdentifier {
         return String(describing: object)
-    }
-    
-    func pageControllerDidEndLiveTransition(_ pageController: NSPageController) {
-        completeTransition()
     }
 }
 
@@ -56,13 +52,13 @@ extension PageController {
     private func changePageController(at index: Int) {
         selectedIndex = index
     }
-    
+
     override func navigateForward(_ sender: Any?) {
         if selectedIndex < myViewControllers.count - Constants.last {
             changePageController(at: selectedIndex + Constants.last)
         }
     }
-    
+
     override func navigateBack(_ sender: Any?) {
         if selectedIndex > 0 {
             changePageController(at: selectedIndex - Constants.last)
