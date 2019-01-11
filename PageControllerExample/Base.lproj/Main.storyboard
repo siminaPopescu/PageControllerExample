@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PageControllerExample" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,25 +694,116 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="loD-sS-slv" kind="relationship" relationship="window.shadowedContentViewController" id="11T-y0-xU1"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Page Controller-->
+        <scene sceneID="Q5g-11-qQU">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <pagecontroller id="loD-sS-slv" sceneMemberID="viewController">
+                    <view key="view" id="XjP-1b-rO1">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </pagecontroller>
+                <customObject id="i0L-sN-JSG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="706"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Beg-RZ-o7c">
+            <objects>
+                <viewController storyboardIdentifier="page4" id="SwL-6X-sBB" sceneMemberID="viewController">
+                    <view key="view" id="4Px-DR-zrS">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="7wj-Hy-Xcb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-309" y="1529"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JTy-V9-sTa">
+            <objects>
+                <viewController id="IHo-Cm-7Oc" sceneMemberID="viewController">
+                    <view key="view" id="RMl-bt-mtz">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="7A2-Xd-zxz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="1130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eoF-w2-iGm">
+            <objects>
+                <viewController storyboardIdentifier="page1" id="dE4-vq-Bdy" sceneMemberID="viewController">
+                    <view key="view" id="0lv-5y-XK2">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="CLt-5i-X1E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="1130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fAM-dy-X7c">
+            <objects>
+                <viewController storyboardIdentifier="page3" id="ZOD-xW-Vxb" sceneMemberID="viewController">
+                    <view key="view" id="Aj6-Ud-vym">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="hQg-iG-kAp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="1130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DLi-5m-I98">
+            <objects>
+                <viewController storyboardIdentifier="page2" id="onG-ya-BKr" sceneMemberID="viewController">
+                    <view key="view" id="yLz-Fh-E8G">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="0l2-SG-y5b" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="1130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KSD-X6-jvd">
+            <objects>
+                <viewController storyboardIdentifier="page5" id="qHC-2c-Rcp" sceneMemberID="viewController">
+                    <view key="view" id="fUo-02-y1y">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="E3r-8W-9tW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="1529"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dn9-8h-jSM">
+            <objects>
+                <viewController storyboardIdentifier="page6" id="1V4-pK-lZg" sceneMemberID="viewController">
+                    <view key="view" id="olH-7D-Zil">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="aMe-SR-RZY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="1529"/>
         </scene>
     </scenes>
 </document>
