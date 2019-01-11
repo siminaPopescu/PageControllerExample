@@ -23,6 +23,7 @@ class PageController: NSPageController {
         delegate = self
         arrangedObjects = myViewControllers
     }
+    
     @IBAction func goToPage3(_ sender: Any) {
         // because the array starts from 0
         changePageController(at: 2)
